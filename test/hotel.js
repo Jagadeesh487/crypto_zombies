@@ -8,11 +8,11 @@ describe("Sample Apps / Hotel", function () {
   beforeEach(async () => {
     [owner, signer1, signer2] = await ethers.getSigners();
     const Contract = await ethers.getContractFactory(
-      "contracts/sample_apps/03_hotel/HotelRoom.sol:HotelRoom",
+      "contracts/hotel.sol:HotelRoom",
       owner
     );
     contract = await Contract.deploy();
-    await contract.deployed();
+    // await contract.deployed();
   });
 
   it("Should be able to verify all variable values", async function () {
